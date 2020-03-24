@@ -1,3 +1,4 @@
+//Kadane's algorithm!
 class Solution
 {
 public:
@@ -12,4 +13,4 @@ public:
         }
         return maxTillIndex;
     }
-}; //Kadane's algorithm!
+};
