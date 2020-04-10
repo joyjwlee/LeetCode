@@ -1,5 +1,5 @@
 class Solution {
-public:
+  public:
     int myAtoi(string str) {
         long long n = 0;
         sscanf(str.c_str(), "%lld", &n);
