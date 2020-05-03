@@ -1,8 +1,6 @@
-class Solution
-{
+class Solution {
 public:
-    int myAtoi(string str)
-    {
+    int myAtoi(string str) {
         long long n = 0;
         sscanf(str.c_str(), "%lld", &n);
         if (n > INT_MAX)
