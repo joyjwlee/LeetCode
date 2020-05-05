@@ -1,8 +1,6 @@
-class Solution
-{
+class Solution {
 public:
-    string longestCommonPrefix(vector<string> &strs)
-    {
+    string longestCommonPrefix(vector<string> &strs) {
         if (strs.empty())
             return "";
         if (strs.size() == 1)
