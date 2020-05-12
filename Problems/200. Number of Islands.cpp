@@ -4,54 +4,54 @@ public:
     int numIslands(vector<vector<char>> &grid)
     {
         if (grid.empty())
-            return 0;
-
-        //Get numbers
-        int numberOfIslands = 0;
-        int Rows = grid.size();
-        int Columns = grid[0].size();
-
-        stack<pair<int, int>> s;
-
-        for (int iI = 0; iI < Rows; iI++)
         {
-            for (int iJ = 0; iJ < Columns; iJ++)
+            return 0;
+        }
+
+        //directional arrays
+        int dr[4] = {-1, 0, 1, 0};
+        int dc[4] = {0, 1, 0, -1};
+
+        //numbers and queue
+        int ans = 0;
+        int r = grid.size();
+        int c = grid[0].size();
+        queue<pair<int, int>> q;
+
+        for (int i = 0; i < r; i++)
+        {
+            for (int j = 0; j < c; j++)
             {
-                if (grid[iI][iJ] == '1')
+                //if we come across a starting point
+                if (grid[i][j] = '1')
                 {
-                    numberOfIslands++;
-                    grid[iI][iJ] = '0';
-                    s.push(pair(iI, iJ));
-                    while (!s.empty())
+                    ans++;
+                    grid[i][j] = '0';
+                    // eliminate all adjacent
+                    q.push(pair(i, j));
+                    while (!q.empty())
                     {
-                        pair rc = s.top();
-                        s.pop();
-                        int r = rc.first, c = rc.second;
-                        if (r + 1 < Rows && grid[r + 1][c] == '1')
+                        pair<int, int> curr = q.front();
+                        q.pop();
+                        int currR = curr.first;
+                        int currC = curr.second;
+                        for (int i = 0; i < 4; i++)
                         {
-                            s.push(pair(r + 1, c));
-                            grid[r + 1][c] = '0';
-                        }
-                        if (r - 1 >= 0 && grid[r - 1][c] == '1')
-                        {
-                            s.push(pair(r - 1, c));
-                            grid[r - 1][c] = '0';
-                        }
-                        if (c + 1 < Columns && grid[r][c + 1] == '1')
-                        {
-                            s.push(pair(r, c + 1));
-                            grid[r][c + 1] = '0';
-                        }
-                        if (c - 1 >= 0 && grid[r][c - 1] == '1')
-                        {
-                            s.push(pair(r, c - 1));
-                            grid[r][c - 1] = '0';
+                            if (0 <= currR + dr[i] && currR + dr[i] < r)
+                            {
+                                if (0 <= currC + dc[i] && currC + dc[i] < c)
+                                {
+                                    if (grid[currR + dr[i]][currC + dc[i]] = '1')
+                                    {
+                                        q.push(pair(currR + dr[i], currC + dc[i]));
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
         }
-
-        return numberOfIslands;
+        return ans;
     }
 };
