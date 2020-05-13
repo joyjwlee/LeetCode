@@ -21,6 +21,7 @@ public:
                 else
                     ans.push_back(0);
             }
+            return ans;
         } else {
             vector<int> ans(n, 1);
             for (int i = 1; i < n; i++) {
@@ -33,6 +34,5 @@ public:
             }
             return ans;
         }
-        return ans;
     }
 };
