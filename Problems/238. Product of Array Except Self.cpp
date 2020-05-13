@@ -12,17 +12,7 @@ public:
         }
 
         vector<int> ans;
-        if (zeroes > 1) {
-            return vector<int>(n, 0);
-        } else if (zeroes == 1) {
-            for (auto x : nums) {
-                if (x == 0)
-                    ans.push_back(product);
-                else
-                    ans.push_back(0);
-            }
-            return ans;
-        } else {
+        if (zeroes == 0) {
             vector<int> ans(n, 1);
             for (int i = 1; i < n; i++) {
                 ans[i] = ans[i - 1] * nums[i - 1];
@@ -33,6 +23,15 @@ public:
                 ans[i] *= p;
             }
             return ans;
+        } if (zeroes == 1) {
+            for (auto x : nums) {
+                if (x == 0)
+                    ans.push_back(product);
+                else
+                    ans.push_back(0);
+            }
+            return ans;
         }
+        return vector<int>(n, 0);
     }
 };
