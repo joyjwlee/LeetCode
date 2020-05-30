@@ -1,5 +1,5 @@
 class Solution {
-public:
+  public:
     string intToRoman(int num) {
         if (num >= 1000) {
             return "M" + intToRoman(num - 1000);
