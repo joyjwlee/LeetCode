@@ -1,5 +1,5 @@
 class Solution {
-public:
+  public:
     string longestCommonPrefix(vector<string> &strs) {
         if (strs.empty())
             return "";
