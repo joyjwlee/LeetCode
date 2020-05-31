@@ -1,5 +1,5 @@
 class Solution {
-    public:
+  public:
     bool isValid(string s) {
         vector<char> dict;
         char c;
