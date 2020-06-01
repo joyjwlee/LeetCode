@@ -1,5 +1,5 @@
 class Solution {
-public:
+  public:
     int strStr(string haystack, string needle) {
         if (needle.length() == 0)
             return 0;
