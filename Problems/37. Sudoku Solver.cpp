@@ -1,5 +1,5 @@
 class Solution {
-public:
+  public:
     int full = (1 << 9) - 1;
     vector<int> rs = vector<int>(9, full);
     vector<int> cs = vector<int>(9, full);
