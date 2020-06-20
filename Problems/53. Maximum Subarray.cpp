@@ -1,6 +1,6 @@
 // Kadane's algorithm!
 class Solution {
-public:
+  public:
     int maxSubArray(vector<int> &nums) {
         if (nums.size() == 0)
             return 0;
