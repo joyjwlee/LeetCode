@@ -11,9 +11,7 @@ class Solution {
             // if psum same
             if (psum == k)
                 ans++;
-            // if diff of psum same
-            if (mp[psum - k])
-                ans += mp[psum - k];
+            ans += mp[psum - k];
             mp[psum]++;
         }
         return ans;
