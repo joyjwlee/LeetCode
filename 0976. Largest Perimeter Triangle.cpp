@@ -6,11 +6,9 @@ class Solution {
         // sort
         sort(A.begin(), A.end());
         // go from back
-        for (int i = A.size() - 1; i >= 2; i--) {
-            int a = A[i], b = A[i - 1], c = A[i - 2];
-            if ((a + b) > c && (a + c) > b && (b + c) > a)
-                return a + b + c;
-        }
+        for (int i = A.size() - 1; i >= 2; i--)
+            if (A[i] < A[i - 1] + A[i - 2])
+                return A[i] + A[i - 1] + A[i - 2];
         return 0;
     }
 };
