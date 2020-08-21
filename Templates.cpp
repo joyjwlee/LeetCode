@@ -8,3 +8,6 @@ while (left < right) {
         left = mid + 1;
 }
 return left;
+
+// VECTOR OF DEFINED SIZE
+vector<vector<int>> vec(n, vector<int>(m));
