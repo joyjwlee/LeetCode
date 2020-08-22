@@ -15,5 +15,10 @@ vector<vector<int>> vec(n, vector<int>(m));
 // SORT VECTOR (for ascending, remove last parameter)
 sort(v.begin(), v.end(), greater<int>());
 
+// CUSTOM SORT VECTOR (sort by second element, ascending order)
+sort(points.begin(), points.end(), [](vector<int> &a, vector<int> &b) {
+    return a[1] < b[1];
+});
+
 // UNORDERED MAP
 unordered_map<char, int> mp;
