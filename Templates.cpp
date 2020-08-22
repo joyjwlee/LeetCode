@@ -11,3 +11,6 @@ return left;
 
 // VECTOR OF DEFINED SIZE
 vector<vector<int>> vec(n, vector<int>(m));
+
+// UNORDERED MAP
+unordered_map<char, int> mp;
