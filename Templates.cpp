@@ -12,5 +12,8 @@ return left;
 // VECTOR OF DEFINED SIZE
 vector<vector<int>> vec(n, vector<int>(m));
 
+// SORT VECTOR (for ascending, remove last parameter)
+sort(v.begin(), v.end(), greater<int>());
+
 // UNORDERED MAP
 unordered_map<char, int> mp;
