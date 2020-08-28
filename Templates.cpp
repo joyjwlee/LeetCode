@@ -43,3 +43,20 @@ void DFS(vector<vector<char>> &grid, int i, int j) {
             DFS(grid, i + dr[k], j + dc[k]);
     }
 }
+
+// INSERT FOR SINGLY-LINKED LIST
+// helper to insert
+void insert_node(ListNode *&curr, int val) {
+    // if null
+    if (curr == NULL) {
+        curr = new ListNode(val);
+        return;
+    }
+
+    // otherwise iterate thru and add
+    ListNode *temp = curr;
+    while (temp->next != NULL)
+        temp = temp->next;
+    temp->next = new ListNode(val);
+    return;
+}
