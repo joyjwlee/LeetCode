@@ -60,3 +60,21 @@ void insert_node(ListNode *&curr, int val) {
     temp->next = new ListNode(val);
     return;
 }
+
+// ITERATE BINARY TREE VIA STACK
+stack<TreeNode *> s;
+s.push(node);
+
+// iterate
+while (!s.empty()) {
+    // get current, remove
+    TreeNode *curr = s.top();
+    s.pop();
+    // if null
+    if (curr == NULL)
+        continue;
+    // otherwise, get val and add to stack
+    v.push_back(curr->val);
+    s.push(curr->left);
+    s.push(curr->right);
+}
