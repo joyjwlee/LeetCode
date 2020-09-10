@@ -23,6 +23,10 @@ sort(points.begin(), points.end(), [](vector<int> &a, vector<int> &b) {
 // UNORDERED MAP
 unordered_map<char, int> mp;
 
+// ITERATE THROUGH MAP
+for (auto i : mp)
+    cout << i.first << " " << i.second << endl;
+
 // DFS
 // dr dc arrays
 int dr[4] = {-1, 0, 1, 0};
