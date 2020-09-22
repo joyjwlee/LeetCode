@@ -96,3 +96,49 @@ int getGCF(int a, int b) {
     return getGCF(b % a, a);
 }
 
+// TREE TRAVERSALS
+// Inorder Traversal (Left-Root-Right)
+void printInorder(struct Node *node) {
+    // end case
+    if (node == NULL)
+        return;
+
+    // recur right
+    printInorder(node->left);
+
+    // print curr
+    cout << node->data << " ";
+
+    // recur right
+    printInorder(node->right);
+}
+// Preorder Traversal (Root-Left-Right)
+void printPreorder(struct Node *node) {
+    // end case
+    if (node == NULL)
+        return;
+
+    // print curr
+    cout << node->data << " ";
+
+    // recur left
+    printPreorder(node->left);
+
+    // recur right
+    printPreorder(node->right);
+}
+// Postorder Traversal (Left-Right-Root)
+void printPostorder(struct Node *node) {
+    // end case
+    if (node == NULL)
+        return;
+
+    // recur left
+    printPostorder(node->left);
+
+    // recur right
+    printPostorder(node->right);
+
+    // print curr
+    cout << node->data << " ";
+}
