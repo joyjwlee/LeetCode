@@ -89,9 +89,10 @@ string word;         // store individual word
 while (s >> word)    // iterate through each word
     cout << word << endl;
 
-// Euclid's for GCF
+// EUCLID'S FOR GCF
 int getGCF(int a, int b) {
     if (a == 0)
         return b;
     return getGCF(b % a, a);
 }
+
