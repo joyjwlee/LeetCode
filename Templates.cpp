@@ -153,3 +153,9 @@ struct {
         return false;
     }
 } lexico;
+
+// BOOL METHOD FOR CUSTOM SORT
+static bool custom(string &a, string &b) {
+    return a >= b;
+}
+sort(s.begin(), s.end(), custom);
