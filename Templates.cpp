@@ -142,3 +142,14 @@ void printPostorder(struct Node *node) {
     // print curr
     cout << node->data << " ";
 }
+
+// STRUCT FOR CUSTOM SORT (lexicographic:)
+struct {
+    bool operator()(string a, string b) const {
+        int len = (a.size() < b.size()) ? a.size() : b.size();
+        for (int i = 0; i < len; i++)
+            if (a[i] > b[i])
+                return true;
+        return false;
+    }
+} lexico;
