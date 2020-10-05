@@ -159,3 +159,7 @@ static bool custom(string &a, string &b) {
     return a >= b;
 }
 sort(s.begin(), s.end(), custom);
+
+// SET
+set<int> s;
+return vector<int>(s.begin(), s.end()); // s as vector
