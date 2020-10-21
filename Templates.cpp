@@ -13,7 +13,7 @@ return left;
 vector<vector<int>> vec(n, vector<int>(m));
 
 // CUSTOM SORT WITH CMP METHOD AS ADDITIONAL PARAMETER
-bool cmp(pair<int, int> &a, pair<int, int> &b) {
+static bool cmp(pair<int, int> &a, pair<int, int> &b) {
     return a.second < b.second;
 }
 vector<pair<int, int>> vec;
