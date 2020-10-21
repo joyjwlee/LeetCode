@@ -12,6 +12,13 @@ return left;
 // VECTOR OF DEFINED SIZE
 vector<vector<int>> vec(n, vector<int>(m));
 
+// CUSTOM SORT WITH CMP METHOD AS ADDITIONAL PARAMETER
+bool cmp(pair<string, int> &a, pair<string, int> &b) {
+    return a.second < b.second;
+}
+vector<pair<int, int>> vec;
+sort(vec.begin(), vec.end(), cmp);
+
 // SORT VECTOR (for ascending, remove last parameter)
 sort(v.begin(), v.end(), greater<int>());
 
