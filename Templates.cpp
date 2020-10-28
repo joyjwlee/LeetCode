@@ -169,4 +169,5 @@ sort(s.begin(), s.end(), custom);
 
 // SET
 set<int> s;
+return *gen.begin();                    // vector<string>(gen.begin(), gen.end())[0];
 return vector<int>(s.begin(), s.end()); // s as vector
