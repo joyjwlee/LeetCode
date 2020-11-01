@@ -1,5 +1,5 @@
 // BINARY SEARCH
-int left = min(search_space), right = max(search_space);
+int left = min(search_space), right = max(search_space), mid;
 while (left < right) {
     mid = left + (right - left) / 2;
     if (condition(mid))
