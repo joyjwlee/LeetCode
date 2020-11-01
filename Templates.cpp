@@ -1,4 +1,5 @@
-// BINARY SEARCH
+// BINARY SEARCH (2 versions)
+// VER 1
 int left = min(search_space), right = max(search_space), mid;
 while (left < right) {
     mid = left + (right - left) / 2;
