@@ -42,6 +42,11 @@ sort(points.begin(), points.end(), [](vector<int> &a, vector<int> &b) {
 
 // UNORDERED MAP
 unordered_map<char, int> mp;
+if (mp.find(key) == m.end()) {
+    // not found
+} else {
+    // found
+}
 
 // ITERATE THROUGH MAP
 for (auto i : mp)
