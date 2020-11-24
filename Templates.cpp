@@ -189,3 +189,20 @@ sort(s.begin(), s.end(), custom);
 set<int> s;
 return *gen.begin();                    // vector<string>(gen.begin(), gen.end())[0];
 return vector<int>(s.begin(), s.end()); // s as vector
+
+// LOOP THROUGH ALL NEIGHBORS FOR EACH VAL IN ARRAY
+for (int i = 1; i < N + 1; i++) {
+    for (int j = 1; j < N + 1; j++) {
+        // if icecream, loop through neighbors
+        if (condition) {
+            for (int k = i - 1; k <= i + 1; k++) {
+                for (int l = j - 1; l <= j + 1; l++) {
+                    // if not self and neighbor is also condition
+                    if ((k != i || l != j) && condition) {
+                        increment counter
+                    }
+                }
+            }
+        }
+    }
+}
