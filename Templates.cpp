@@ -21,6 +21,17 @@ while (l <= r) {
     }
 }
 return ans;
+// VER 3
+int l = 0, r = arr.size(), m;
+while (l < r) {
+    m = l + (r - l + 1) / 2;
+    if (condition(m, citations)) {
+        l = m;
+    } else {
+        r = m - 1;
+    }
+}
+return l;
 
 // VECTOR OF DEFINED SIZE
 vector<vector<int>> vec(n, vector<int>(m));
