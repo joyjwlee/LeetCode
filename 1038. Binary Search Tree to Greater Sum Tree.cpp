@@ -12,6 +12,7 @@
 class Solution {
   public:
     TreeNode *bstToGst(TreeNode *root) {
+        // same as 538. Convert BST to Greater Tree
         // make stack, create copy of root
         stack<TreeNode *> stk;
         TreeNode *node = root;
