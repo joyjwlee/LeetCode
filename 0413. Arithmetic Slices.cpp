@@ -27,13 +27,6 @@ class Solution {
         // don't forget last n
         sizes.push_back(n);
 
-        cout << "diffs: ";
-        for (int n : diffs)
-            cout << n << " ";
-        cout << "\nsizes: ";
-        for (int n : sizes)
-            cout << n << " ";
-
         // calculate and return answer
         int ans = 0;
         for (int n : sizes) {
