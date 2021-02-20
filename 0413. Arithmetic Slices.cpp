@@ -31,8 +31,11 @@ class Solution {
         int ans = 0;
         for (int n : sizes) {
             if (n >= 3) {
+                /*
                 for (int i = 3; i <= n; i++)
                     ans += n - i + 1;
+                */
+                ans += n * (n - 3 + 1) - (n + 3) * (n - 3 + 1) / 2 + (n - 3 + 1);
             }
         }
         return ans;
