@@ -9,18 +9,23 @@ class Solution {
         // loop through all
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
+                // reset vals
+                numNeighbors = 0, sum = 0;
                 // loop through all neighbors
                 for (int k = i - 1; k <= i + 1; k++) {
                     for (int l = j - 1; l <= j + 1; l++) {
-                        // if not self and neighbor is also condition
-                        if ((k != i || l != j) && condition) {
-                            // increment counter
+                        // if in bounds
+                        if (0 <= k && k < n && 0 <= l && l < m) {
+                            numNeighbors++;
+                            sum += M[k][l];
                         }
                     }
                 }
+                ans[i][j] = sum / numNeighbors;
             }
         }
-    }
 
-    return ans;
+        // return
+        return ans;
+    }
 };
