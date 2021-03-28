@@ -215,3 +215,11 @@ for (int i = 0; i < n; i++) {
         }
     }
 }
+
+// split string by space
+string temp;
+vector<string> words;
+stringstream delim(line);
+while (getline(delim, temp, ' ')) {
+    words.push_back(temp);
+}
