@@ -223,3 +223,18 @@ stringstream delim(line);
 while (getline(delim, temp, ' ')) {
     words.push_back(temp);
 }
+
+// return true if prime
+bool isPrime(int n) {
+    // edge
+    if (n == 0 || n == 1)
+        return false;
+
+    // loop until sqrt
+    for (int i = 2; i <= sqrt(n); i++)
+        if (n % i == 0)
+            return false;
+
+    // otherwise return true
+    return true;
+}
