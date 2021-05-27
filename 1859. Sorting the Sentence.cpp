@@ -1,17 +1,18 @@
 class Solution {
   public:
     string sortSentence(string s) {
+        // init
         string temp = "";
         vector<string> words;
 
-        // parse and add
+        // parse, add, and sort
         for (char c : s) {
             // add and reset string
             if (c == ' ') {
                 words.push_back(temp);
                 temp = "";
             }
-            // otherwise add
+            // otherwise add chars
             if (isalpha(c))
                 temp += c;
             else
@@ -20,6 +21,7 @@ class Solution {
         words.push_back(temp);
         sort(words.begin(), words.end());
 
+        // concatenate and return
         string ans = "";
         for (string str : words) {
             for (char c : str)
