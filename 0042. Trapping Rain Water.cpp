@@ -7,6 +7,37 @@ class Solution {
 
         // init
         int n = height.size();
+        int l = 0, r = n - 1;
+        int maxLeft = height[0], maxRight = height[n - 1];
+
+        // calc and return
+        int ans = 0;
+        while (l < r) {
+            if (maxLeft < maxRight) {
+                l++;
+                maxLeft = max(maxLeft, height[l]);
+                ans += maxLeft - height[l];
+            } else {
+                r--;
+                maxRight = max(maxRight, height[r]);
+                ans += maxRight - height[r];
+            }
+        }
+        return ans;
+    }
+};
+
+/*
+// old solution
+class Solution {
+  public:
+    int trap(vector<int> &height) {
+        // edge
+        if (height.size() <= 2)
+            return 0;
+
+        // init
+        int n = height.size();
         vector<int> maxLeft(n, 0);
         vector<int> maxRight(n, 0);
 
@@ -26,6 +57,7 @@ class Solution {
         return ans;
     }
 };
+*/
 
 /*
 notes/observations:
