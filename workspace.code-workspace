@@ -6,5 +6,11 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"files.associations": {
+			"ostream": "cpp",
+			"random": "cpp"
+		}
+	}
 }
