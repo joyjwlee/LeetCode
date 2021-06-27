@@ -239,3 +239,6 @@ bool isPrime(int n) {
     // otherwise return true
     return true;
 }
+
+// FILL 2D VECTOR
+fill(twoDVector.begin(), twoDVector.end(), vector<int>(size, val));
