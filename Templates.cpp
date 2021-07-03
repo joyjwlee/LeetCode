@@ -50,6 +50,10 @@ sort(v.begin(), v.end(), greater<int>());
 sort(points.begin(), points.end(), [](vector<int> &a, vector<int> &b) {
     return a[1] < b[1];
 });
+// CUSTOM SORT VECTOR (sort closest to x)
+sort(arr.begin(), arr.end(), [x](const auto a, const auto b) {
+    return abs(a - x) < abs(b - x);
+});
 
 // UNORDERED MAP
 unordered_map<char, int> mp;
